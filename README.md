@@ -2,6 +2,8 @@ Repository khusus untuk proyek UAS Mobile Programming. Aplikasi yang dikembangka
 
 tuxcatenate - Devid Sumarlie (535180008)
 
+tahap pembelajaran layout dan coding dimulai dari tanggal 25-27.
+
 first changelog (29/05/2022) : changelog perubahan program hari ini dri 535180008 :
 
 - perubahan warna ( sekedar test) untuk box yang berisi konten humidity dan wind speed di menu utama
