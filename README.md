@@ -7,7 +7,7 @@ first changelog (29/05/2022) : changelog perubahan program hari ini dri 53518000
 - perubahan warna ( sekedar test) untuk box yang berisi konten humidity dan wind speed di menu utama
 - properti beberapa layout ada yg dirubah
 - sudah ada info hari di upper side (hanya sebatas sun artinya sunday)
-- fitur lokasi msih hrus berbasis pencarian , lokasi pas aplikasi awal dimulai msih cari lokasi dimana hosting API nya di host( search box sementara dinonaktifin krena hrus kesepakatan apa perlu fitur cari lokasi atau add lokasi berdasarkan list dri popup - kayak di mockup kemarin)
+- fitur lokasi msih hrus berbasis pencarian , lokasi pas aplikasi awal dimulai msih cari lokasi dimana hosting API nya di host( search box sementara dinonaktiflan krena hrus kesepakatan apa perlu fitur cari lokasi atau add lokasi berdasarkan list dri popup - seperti di mockup kemarin)
 - ikon max/min temperatur belum ada
 - penghapusan tombol gulir(sliding) untuk pindah halaman ke kanan ( bentrokan atau overlapping sma komponen lain jadi peletekannya jelek)
 - perlu tambah page terpisah untuk yg sliding tdi
