@@ -14,7 +14,7 @@ import '../widgets/weatherDetail.dart';
 import '../widgets/sevenDayForecast.dart';
 
 //535180008-aplikasi dan AVD sudah sukses berjalan setelah dilakukan perbaikan upgrade versi SDK-android dan versi kotlin di file build milik gradle
-
+// penambahan halaman About untuk aplikasi rencananya akan ditambah oleh Jasmine Kezia Halim
 class HomeScreen extends StatefulWidget {
   static const routeName = '/homeScreen';
   @override
