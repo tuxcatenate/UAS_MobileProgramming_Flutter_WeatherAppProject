@@ -13,6 +13,8 @@ import '../widgets/searchBar.dart';
 import '../widgets/weatherDetail.dart';
 import '../widgets/sevenDayForecast.dart';
 
+//535180008-aplikasi dan AVD sudah sukses berjalan setelah dilakukan perbaikan upgrade versi SDK-android dan versi kotlin di file build milik gradle
+
 class HomeScreen extends StatefulWidget {
   static const routeName = '/homeScreen';
   @override
@@ -59,7 +61,10 @@ class _HomeScreenState extends State<HomeScreen> {
           centerTitle: true,
         ),
         drawer: Drawer(
-          //UNCOMMENT ini jika tidak ingin app drawer
+          //UNCOMMENT ini jika tidak ingin app drawer (535180008)
+          //navigation drawer tujuan awalnya adalah untuk menambhkan menu utilitas baru
+          //tetapi diletakkan pada sisi nav drawer agar tidak membuat halaman home berantakan
+          //navigation drawer juga 1 kesatuan dengan Scaffold, dan ditampilkan bersama dengan appBar()
           child: ListView(
             // Important: Remove any padding from the ListView.
             padding: EdgeInsets.zero,
@@ -106,8 +111,12 @@ class _HomeScreenState extends State<HomeScreen> {
                     ? LocationError()
                     : Column(
                         children: [
+                          /* 535180008- fitur searchBar di uncomment sementara karena ada button informasi tidak berfungsi
+                          /dan menyebabkan penggeseran tampilan layout lainnya sampai mentok kebawah*/
                           //SearchBar(),
                           /*
+
+                          //535180008 - sliding button dinonaktifkan(tidak diperlukan) , dan tejraidoverlapping jika ditauh dibagian bawah juga
                           SmoothPageIndicator(
                             controller: _pageController,
                             count: 2,
@@ -165,6 +174,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                               ),
                                             ),
                                             /*
+                                            /*535180008 - dibawah dinonaktifkan karena akan dibuat separasi halaman baru
+                                            (tidak ditampilkan saat layar slide ke kanan)*/
                                             FadeIn(
                                                 delay: 0.66,
                                                 child: WeatherDetail(

@@ -6,6 +6,7 @@ class DailyWeather with ChangeNotifier {
   var date;
   var precip;
   var uvi;
+  //tambahkan variabel humid&wind sebagai penampung dan dapat diakses di weatherInfo.dart(535180008)
   var humidity;
   var windspeed;
 
@@ -26,6 +27,9 @@ class DailyWeather with ChangeNotifier {
     return DailyWeather(
       precip: precipitation,
       uvi: json['daily'][0]['uvi'],
+      //tambah windspeed dan humidity, ambil dari index yang sudah direturn dari API openweather (535180008)
+      //API yang sempat dicoba : https://api.openweathermap.org/data/2.5/onecall?lat=-6.200000&lon=106.816666&units=metric&exclude=minutely,current&appid=b41597da057bd11760fd724ae4bee03a
+      //API tersebut merujuk pada lokasi jakarta sesuai latitude dan longitude
       humidity: json['daily'][0]['humidity'],
       windspeed: json['daily'][0]['wind_speed'],
     );

@@ -53,10 +53,12 @@ class WeatherInfo extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(15),
-          color: Colors.deepOrange.shade100,
+          color: Colors.deepOrange
+              .shade100, //ubah warna tampilan kotak ke tampilan oange tapi tidak terlalu terang(535180008)
           boxShadow: [
             BoxShadow(
-              color: Colors.grey.withOpacity(0.4),
+              color:
+                  Colors.grey.withOpacity(0.4), //set opacity bagian outer-box
               blurRadius: 15,
               offset: Offset(6, 8),
             ),
@@ -68,8 +70,9 @@ class WeatherInfo extends StatelessWidget {
             SizedBox(
               child: _weatherInfoBuilder(
                 'Wind Speed',
-                '${wData.windspeed} m/s',
-                WeatherIcons.wiStrongWind,
+                '${wData.windspeed} m/s', //ubah satuan ke m/s dan ambil dari variabel yang sebelumnya sudah ditambahkan
+                //di dailyWeather.dart (535180008)
+                WeatherIcons.wiStrongWind, //ubah icon
                 15,
                 30,
               ),

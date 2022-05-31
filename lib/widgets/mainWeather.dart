@@ -30,7 +30,8 @@ class MainWeather extends StatelessWidget {
       child: ListView(
         children: [
           Container(
-              alignment: Alignment.center,
+              alignment: Alignment
+                  .center, //diset ke center juga untuk alignment nya(tengah)
               child: Padding(
                   padding: const EdgeInsets.only(bottom: 5, right: 10, top: 5),
                   child: SizedBox(
@@ -41,6 +42,8 @@ class MainWeather extends StatelessWidget {
                       )))),
           Container(
             //padding: EdgeInsets.all(10),
+            //535180008 - menambahkan button di dalam container, container ditambahkan dibawah children dari listview agar
+            //bisa dikelompokkan ke dalam tampilan bagian atas
             alignment: Alignment.centerRight,
             child: SizedBox(
               height: 20,
@@ -53,6 +56,12 @@ class MainWeather extends StatelessWidget {
                   color: Colors.green,
                   splashColor: Colors.purple,
                   onPressed: () {
+                    //(535180008)
+                    //page route diarahkan ke halaman baru, halaman yang dimaksud adalah halaman baru untuk menampilkan informasi detil
+                    //dari today weather, data diambil dari codingan diatas saja dan disupply ke parameter wData, agar tidak muncul error
+                    //pada saat button di-klik
+                    //tidak menggunakan pushhnamed karena untuk mereplace keseleruhan screen halaman baru dengan platform-adaptive transition
+                    //referensi : https://api.flutter.dev/flutter/material/MaterialPageRoute-class.html
                     //Navigator.of(context).pushNamed(WeatherDetail.routeName);
                     Navigator.of(context).push(MaterialPageRoute(
                         builder: (context) => WeatherDetail(wData: wData)));
@@ -85,7 +94,7 @@ class MainWeather extends StatelessWidget {
           SizedBox(height: 10),
           Row(
             mainAxisAlignment: MainAxisAlignment
-                .start, //kalau di set ke centered, akan ke tengah
+                .start, //kalau di set ke centered, akan ke tengah , ada opsi lain yaitu .end(535180008)
             children: [
               Padding(
                 padding: const EdgeInsets.only(bottom: 15, right: 25),
@@ -103,6 +112,7 @@ class MainWeather extends StatelessWidget {
           ),
           SizedBox(height: 10),
           Text(
+            //535180008 - mengubah tampilan teks ke tampilan min dan maksimal saja
             //'${wData.weather.tempMax.toStringAsFixed(0)}°/ ${wData.weather.tempMin.toStringAsFixed(0)}° Feels like ${wData.weather.feelsLike.toStringAsFixed(0)}°',
             'Max temp: ${wData.weather.tempMax.toStringAsFixed(0)}°/ Min temp: ${wData.weather.tempMin.toStringAsFixed(0)}°',
             style: _style1.copyWith(fontSize: 17),

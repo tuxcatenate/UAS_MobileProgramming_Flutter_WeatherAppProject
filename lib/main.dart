@@ -12,6 +12,7 @@ void main() {
   );
 }
 
+//encana login screen di-integasikan oleh Jasmine Kezia Halim
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
